@@ -1,0 +1,143 @@
+#Liquid-Background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center;     /* vertical centering */
+
+  flex-direction: column;  /* stacks text + nav vertically */
+
+  color: whitesmoke;
+  font-size: xx-large;
+  font-family: "Tektur", sans-serif;
+  text-align: center;
+}
+
+
+a {
+  color: #ffd966;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff8800;
+}
+
+/* ---------- Text Container for Story Pages ---------- */
+.text-container {
+  text-align: center;
+  color: whitesmoke;
+  font-family: "Tektur", sans-serif;
+  font-size: 1.5rem;
+  margin: 20% auto;
+  width: 80%;
+  line-height: 1.6;
+}
+
+/* ---------- Hidden Text Behavior ---------- */
+.hidden {
+  display: none;
+}
+
+/* ---------- Clickable Text ---------- */
+.clickable {
+  cursor: pointer;
+  transition: color 0.3s ease, opacity 0.6s ease;
+}
+
+.clickable:hover {
+  color: #ffd966; /* gold hover color */
+  opacity: 0.8;
+}
+
+/* ---------- Optional: Smooth Fade-In Effect ---------- */
+.fade-in {
+  display: block;
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Default background */
+.ancient-sea {
+  background: radial-gradient(circle at center, #003344, #000000);
+  transition: background 1.5s ease;
+}
+
+/* Ancient Organism Background Colors*/
+/* Shallow ocean — bright and illuminated */
+.bg-stage1 {
+  background: radial-gradient(circle at center, #3cc6c1, #012a3a);
+}
+
+/* Still bright but deeper blue-green tones */
+.bg-stage2 {
+  background: radial-gradient(circle at center, #27a0a0, #012533);
+}
+
+/* Soft transition into teal shadows */
+.bg-stage3 {
+  background: linear-gradient(to bottom, #1f7d88, #011f2b);
+}
+
+/* Deeper turquoise fading toward navy */
+.bg-stage4 {
+  background: linear-gradient(to bottom, #156270, #001a26);
+}
+
+/* Approaching the twilight zone — darker and less green */
+.bg-stage5 {
+  background: linear-gradient(to bottom, #0f4c5a, #00141f);
+}
+
+/* Faint light remaining — dark teal to near black */
+.bg-stage6 {
+  background: linear-gradient(to bottom, #093642, #000f19);
+}
+
+/* Deep ocean — very dark blue with subtle gradient */
+.bg-stage7 {
+  background: linear-gradient(to bottom, #052832, #000a12);
+}
+
+/* Abyssal — almost black with a faint blue glow */
+.bg-stage8 {
+  background: radial-gradient(circle at center, #021820, #000509);
+}
+
+/* Complete darkness — only the slightest blue tint */
+.bg-stage9 {
+  background: linear-gradient(to bottom, #010a10, #000000);
+}
+
+.hidden {
+  display: none;
+}
+
+.fade-in {
+  display: block;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+

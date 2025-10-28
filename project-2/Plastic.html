@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plastic</title>
+  <link rel="stylesheet" href="Plastic.css">
+</head>
+<body class="Plastic">
+  <div class="text-container">
+    <p id="line1" class="clickable">Mutated into a polymer</p>
+    <p id="line2" class="hidden">Every atom is locked in a chain</p>
+    <p id="line3" class="hidden">Immortal</p>
+    <p id="line4" class="hidden">Filled with water, and thrown away</p>
+    <a id="line5" href="ReturnOcean.html" class="hidden final-button">Return to the refinery</a>
+  </div> 
+
+  <script>
+    const body = document.querySelector("body");
+
+    const lines = [
+      "#line1",
+      "#line2",
+      "#line3",
+      "#line4",
+      "#line5"
+    ];
+
+    const bgStages = [
+      "bg-stage1",
+      "bg-stage2",
+      "bg-stage3",
+      "bg-stage4",
+      "bg-stage5"
+    ];
+
+    lines.forEach((line, index) => {
+      const element = document.querySelector(line);
+      element.addEventListener("click", () => {
+        const nextIndex = index + 1;
+        if(nextIndex < lines.length){
+          const nextElement = document.querySelector(lines[nextIndex]);
+          nextElement.classList.remove("hidden");
+          nextElement.classList.add("fade-in");
+        }
+
+        // remove all previous bg-stages and add current one
+        body.classList.remove(...bgStages);
+        body.classList.add(bgStages[index]);
+      });
+    });
+  </script>
+</body>
+</html>

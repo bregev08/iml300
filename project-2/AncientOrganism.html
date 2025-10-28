@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ancient Sea</title>
+  <link rel="stylesheet" href="AncientOrganism.css">
+</head>
+<body class="ancient-sea">
+  <div class="text-container">
+    <p id="line1" class="clickable">Hundreds of millions of years ago, you are carbon dioxide</p>
+    <p id="line2" class="hidden">Pulled from the sky, you dissolve into the ocean</p>
+    <p id="line3" class="hidden">Absorbed by phytoplankton, you are now their living tissue</p>
+    <p id="line4" class="hidden">When they die and fall to the ocean floor, you are their remains</p>
+    <p id="line5" class="hidden">Buried under layer</p>
+    <p id="line6" class="hidden">And layer</p>
+    <p id="line7" class="hidden">And layer</p>
+    <p id="line8" class="hidden">And layer</p>
+    <p id="line9" class="hidden">Of sediment</p>
+    <a id="line10" href="Pressure.html" class="hidden final-button">You are trapped</a>
+  </div>
+
+  <script>
+    const body = document.querySelector("body");
+
+    // Line 1 click
+    document.querySelector("#line1").addEventListener("click", function() {
+      document.querySelector("#line2").classList.remove("hidden");
+      document.querySelector("#line2").classList.add("fade-in");
+      body.classList.remove("bg-stage2","bg-stage3","bg-stage4","bg-stage5","bg-stage6","bg-stage7","bg-stage8","bg-stage9");
+      body.classList.add("bg-stage1");
+    });
+
+    // Line 2 click
+    document.querySelector("#line2").addEventListener("click", function() {
+      document.querySelector("#line3").classList.remove("hidden");
+      document.querySelector("#line3").classList.add("fade-in");
+      body.classList.remove("bg-stage1","bg-stage3","bg-stage4","bg-stage5","bg-stage6","bg-stage7","bg-stage8","bg-stage9");
+      body.classList.add("bg-stage2");
+    });
+
+    // Line 3 click
+    document.querySelector("#line3").addEventListener("click", function() {
+      document.querySelector("#line4").classList.remove("hidden");
+      document.querySelector("#line4").classList.add("fade-in");
+      body.classList.remove("bg-stage1","bg-stage2","bg-stage4","bg-stage5","bg-stage6","bg-stage7","bg-stage8","bg-stage9");
+      body.classList.add("bg-stage3");
+    });
+
+    // Line 4 click
+    document.querySelector("#line4").addEventListener("click", function() {
+      document.querySelector("#line5").classList.remove("hidden");
+      document.querySelector("#line5").classList.add("fade-in");
+      body.classList.remove("bg-stage1","bg-stage2","bg-stage3","bg-stage5","bg-stage6","bg-stage7","bg-stage8","bg-stage9");
+      body.classList.add("bg-stage4");
+    });
+
+    // Line 5 click
+    document.querySelector("#line5").addEventListener("click", function() {
+      document.querySelector("#line6").classList.remove("hidden");
+      document.querySelector("#line6").classList.add("fade-in");
+      body.classList.remove("bg-stage1","bg-stage2","bg-stage3","bg-stage4","bg-stage6","bg-stage7","bg-stage8","bg-stage9");
+      body.classList.add("bg-stage5");
+    });
+
+    // Line 6 click
+    document.querySelector("#line6").addEventListener("click", function() {
+      document.querySelector("#line7").classList.remove("hidden");
+      document.querySelector("#line7").classList.add("fade-in");
+      body.classList.remove("bg-stage1","bg-stage2","bg-stage3","bg-stage4","bg-stage5","bg-stage7","bg-stage8","bg-stage9");
+      body.classList.add("bg-stage6");
+    });
+
+    // Line 7 click
+    document.querySelector("#line7").addEventListener("click", function() {
+      document.querySelector("#line8").classList.remove("hidden");
+      document.querySelector("#line8").classList.add("fade-in");
+      body.classList.remove("bg-stage1","bg-stage2","bg-stage3","bg-stage4","bg-stage5","bg-stage6","bg-stage8","bg-stage9");
+      body.classList.add("bg-stage7");
+    });
+
+    // Line 8 click
+    document.querySelector("#line8").addEventListener("click", function() {
+      document.querySelector("#line9").classList.remove("hidden");
+      document.querySelector("#line9").classList.add("fade-in");
+      body.classList.remove("bg-stage1","bg-stage2","bg-stage3","bg-stage4","bg-stage5","bg-stage6","bg-stage7","bg-stage9");
+      body.classList.add("bg-stage8");
+    });
+
+    // Line 9 click -> final button
+    document.querySelector("#line9").addEventListener("click", function() {
+      document.querySelector("#line10").classList.remove("hidden");
+      document.querySelector("#line10").classList.add("fade-in");
+      body.classList.remove("bg-stage1","bg-stage2","bg-stage3","bg-stage4","bg-stage5","bg-stage6","bg-stage7","bg-stage8");
+      body.classList.add("bg-stage9");
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+/* ===== Body & Container ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Merriweather", serif;
+  color: whitesmoke;
+  background: radial-gradient(circle at center, #003344, #000000);
+  transition: background 1.5s ease;
+  min-height: 100vh;
+}
+
+.text-container {
+  width: 80%;
+  margin: 2rem auto;
+  text-align: center;
+  line-height: 1.8;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ===== Hidden & Fade-In ===== */
+.hidden {
+  display: none !important;
+}
+
+.fade-in {
+  display: block;
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ===== Clickable Text ===== */
+.clickable {
+  cursor: pointer;
+  transition: color 0.3s ease, opacity 0.6s ease;
+}
+
+.clickable:hover {
+  color: #ffd966;
+  opacity: 0.8;
+}
+
+/* ===== Final Button ===== */
+.final-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 1rem auto;
+  background: #ffd966;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.final-button:hover {
+  background: #ff8800;
+}
+
+.final-button.fade-in {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 1.2s forwards;
+}

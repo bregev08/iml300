@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pressure</title>
+  <link rel="stylesheet" href="Refinery.css">
+</head>
+<body class="Pressure">
+  <div class="text-container">
+    <p id="line1" class="clickable">Unearthed by man</p>
+    <p id="line2" class="hidden">Fired again</p>
+    <p id="line3" class="hidden">Distilled to your different forms</p>
+    <a id="line4" href="Fuel.html" class="hidden final-button">Fuel</a>
+    <a id="line5" href="Plastic.html" class="hidden final-button">Plastic</a>
+  </div> 
+
+  <script>
+    const body = document.querySelector("body");
+
+    document.querySelector("#line1").addEventListener("click", function() {
+      document.querySelector("#line2").classList.remove("hidden");
+      document.querySelector("#line2").classList.add("fade-in");
+      body.classList.remove("bg-stage2","bg-stage3","bg-stage4","bg-stage5");
+      body.classList.add("bg-stage1");
+    });
+
+    document.querySelector("#line2").addEventListener("click", function() {
+      document.querySelector("#line3").classList.remove("hidden");
+      document.querySelector("#line3").classList.add("fade-in");
+      body.classList.remove("bg-stage1","bg-stage3","bg-stage4","bg-stage5");
+      body.classList.add("bg-stage2");
+    });
+
+    document.querySelector("#line3").addEventListener("click", function() {
+  document.querySelector("#line4").classList.remove("hidden");
+  document.querySelector("#line4").classList.add("fade-in");
+  document.querySelector("#line5").classList.remove("hidden");
+  document.querySelector("#line5").classList.add("fade-in");
+  body.classList.remove("bg-stage1","bg-stage2","bg-stage4","bg-stage5");
+  body.classList.add("bg-stage3");
+});
+
+  </script>
+</body>
+</html>

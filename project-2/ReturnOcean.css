@@ -1,0 +1,93 @@
+/* ===== Body & Text Container ===== */
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Tektur", sans-serif;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  transition: background 1s ease;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* spacing between lines */
+  align-items: center;
+  max-width: 90%;
+}
+
+/* ===== Hidden & Fade-in ===== */
+.hidden {
+  display: none;
+}
+
+.fade-in {
+  display: block;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ===== Clickable lines ===== */
+.clickable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.clickable:hover {
+  color: #ffd966;
+}
+
+/* ===== Final button ===== */
+.final-button {
+  padding: 0.5rem 1rem;
+  background: #ffd966;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 0.5rem;
+  transition: background 0.3s;
+}
+
+.final-button:hover {
+  background: #ff8800;
+}
+
+/* ===== Background stages ===== */
+.bg-stage1 {
+  background: radial-gradient(circle at center, #003344, #000000);
+}
+
+.bg-stage2 {
+  background: radial-gradient(circle at center, #005566, #001122);
+}
+
+.bg-stage3 {
+  background: linear-gradient(to bottom, #004466, #000000);
+}
+
+.bg-stage4 {
+  background: linear-gradient(to bottom, #002233, #000000);
+}
+
+.bg-stage5 {
+  background: linear-gradient(to bottom, #001122, #000000);
+}
+
+.bg-stage6 {
+  background: linear-gradient(to bottom, #000011, #000000);
+}
+
+.bg-stage7 {
+  background: radial-gradient(circle at center, #001a33, #000000);
+}
