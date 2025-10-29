@@ -1,22 +1,46 @@
-body {
-  margin: 0;
-  height: 100vh;
-  overflow: hidden;
-  color: whitesmoke;
-  font-family: "Tektur", sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  transition: background 1s ease;
-  background: radial-gradient(circle at center, #000814, #000); /* default background */
+#Liquid-Background-5 {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  filter:blur(25px);
 }
 
 .text-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; 
+  gap: 100vh;
+  padding: 100px 5% 100px 0; 
+}
+
+.button-container {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  align-items: flex-end;
+}
+
+.button-container.fade-in {
+  display: flex;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
+body {
+  margin: 0;
+  min-height: 200vh;
+  color: whitesmoke;
+  font-family: "Tektur", sans-serif;
+  font-size: larger;
+  text-align: right; /* Changed from center */
+  transition: background 0.5s ease;
+  background-color: #001a33;
 }
 
 .hidden {
@@ -39,20 +63,24 @@ body {
 }
 
 .final-button {
+  display: inline-block;
   padding: 0.5rem 1rem;
-  background: #ffd966;
-  color: #000;
+  color: whitesmoke;
   text-decoration: none;
-  border-radius: 5px;
   font-weight: bold;
-  transition: background 0.3s;
+  transition: color 0.3s;
 }
 
 .final-button:hover {
-  background: #ff8800;
+  color: #ffd966;
 }
 
-/* Background stages */
+.final-button.fade-in {
+  display: inline-block;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+}
+
 .bg-stage1 {
   background: radial-gradient(circle at center, #001a33, #000);
 }
@@ -67,31 +95,4 @@ body {
 
 .bg-stage4 {
   background: linear-gradient(to bottom, #000814, #000);
-}
-
-.bg-stage5 {
-  background: linear-gradient(to bottom, #000, #000);
-}
-
-.text-container {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-}
-
-/* Style buttons */
-.final-button {
-  padding: 0.5rem 1rem;
-  background: #ffd966;
-  color: #000;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background 0.3s;
-  margin: 0.5rem; /* spacing between buttons */
-}
-
-.final-button:hover {
-  background: #ff8800;
 }

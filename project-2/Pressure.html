@@ -7,11 +7,15 @@
   <link rel="stylesheet" href="Pressure.css">
 </head>
 <body class="Pressure">
+   <video autoplay muted loop id="Liquid-Background-1">
+    <source src="videos/Liquid-Background-1.mp4" type="video/mp4">
+  </video>
   <div class="text-container">
-    <p id="line1" class="clickable">Miles under the surface you are still</p>
-    <p id="line2" class="hidden">Under pressure and heat for millions of years</p>
-    <p id="line3" class="hidden">Kerogen to crude oil</p>
-    <a id="line4" href="Refinery.html" class="hidden final-button">You become something more</a>
+    <p id="line1" class="clickable">Miles under the ocean floor you are still. Trapped by the pressure of rock and sediment, absent from
+      oxygen and light, the remains of ancient life begin to change.</p>
+    <p id="line2" class="hidden">For millions of years you bask in the warmth of the Earth's core</p>
+    <p id="line3" class="hidden">Molecular structure reshaped from Kerogen to crude oil</p>
+    <a id="line4" href="Refinery.html" class="hidden final-button">What was once living tissue now runs through the Earth's veins</a>
   </div> 
 
   <script>
@@ -37,6 +41,8 @@
       body.classList.remove("bg-stage1","bg-stage2","bg-stage4","bg-stage5");
       body.classList.add("bg-stage3");
     });
+
+    
   </script>
 </body>
 </html>

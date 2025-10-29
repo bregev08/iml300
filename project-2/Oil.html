@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oil</title>
+  <link rel="stylesheet" href="Oil.css">
+</head>
+<body class="Oil">
+    <video autoplay muted loop id="Liquid-Background-9">
+    <source src="videos/Liquid-Background-9.mp4" type="video/mp4">
+  </video>
+  <div class="text-container">
+  <p id="line1" class="clickable">Returned to the Earth</p>
+  <p id="line2" class="hidden">Crushed and heated over millions of years</p>
+  <p id="line3" class="hidden">You are blood in the Earth's veins</p>
+  <p id="line4" class="hidden">Oil</p>
+  <div class="button-container">
+    <a id="line5" href="Refinery.html" class="hidden final-button">Manna From Hell</a>
+    <a id="line6" href="index.html" class="hidden final-button">Home</a>
+  </div>
+</div>
+
+  <script>
+    const body = document.querySelector("body");
+
+    const lines = [
+      "#line1",
+      "#line2",
+      "#line3",
+      "#line4"
+    ];
+
+    const bgStages = [
+      "bg-stage1",
+      "bg-stage2",
+      "bg-stage3",
+      "bg-stage4"
+    ];
+
+    lines.forEach((line, index) => {
+      const element = document.querySelector(line);
+      element.addEventListener("click", () => {
+        const nextIndex = index + 1;
+        
+        
+        if(line === "#line4") {
+          document.querySelector("#line5").classList.remove("hidden");
+          document.querySelector("#line5").classList.add("fade-in");
+          document.querySelector("#line6").classList.remove("hidden");
+          document.querySelector("#line6").classList.add("fade-in");
+        } else if(nextIndex < lines.length) {
+          const nextElement = document.querySelector(lines[nextIndex]);
+          nextElement.classList.remove("hidden");
+          nextElement.classList.add("fade-in");
+        }
+
+        // remove all previous bg-stages and add current one
+        body.classList.remove(...bgStages);
+        body.classList.add(bgStages[index]);
+      });
+    });
+  </script>
+</body>
+</html>

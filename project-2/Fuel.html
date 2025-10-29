@@ -7,14 +7,18 @@
   <link rel="stylesheet" href="Fuel.css">
 </head>
 <body class="Fuel">
+  <video autoplay muted loop id="Liquid-Background-7">
+    <source src="videos/Liquid-Background-7.mp4" type="video/mp4">
+  </video>
+
   <div class="text-container">
-    <p id="line1" class="clickable">Gasoline in an engine combusts</p>
+    <p id="line1" class="clickable">Fuel in an engine combusts</p>
     <p id="line2" class="hidden">In your original form again</p>
     <p id="line3" class="hidden">You return to the sky</p>
-    <p id="line4" class="hidden">Trapping heat</p>
-    <p id="line5" class="hidden">Melting</p>
+    <p id="line4" class="hidden">Clouds of Carbon Dioxide</p>
+    <p id="line5" class="hidden">Trapping heat</p>
     <p id="line6" class="hidden">Poisoning</p>
-    <a id="line7" href="ReturnOcean.html" class="hidden final-button">Until you return to the sea</a>
+    <a id="line7" href="AncientOrganism.html" class="hidden final-button">Until you return to the sea</a>
   </div> 
 
   <script>
@@ -40,7 +44,7 @@
     "bg-stage7"
   ];
 
-  // loop through all lines except the last
+  
   lines.forEach((line, index) => {
     const element = document.querySelector(line);
     const nextIndex = index + 1;
@@ -51,7 +55,7 @@
         nextElement.classList.remove("hidden");
         nextElement.classList.add("fade-in");
 
-        // update body background
+        
         body.classList.remove(...bgStages);
         body.classList.add(bgStages[nextIndex]);
       });

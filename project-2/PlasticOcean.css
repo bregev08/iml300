@@ -1,0 +1,65 @@
+#Liquid-Background-3 {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  filter: blur(25px);
+}
+
+body.PlasticOcean {
+  background: radial-gradient(circle at center, #001a33, #000000);
+  margin: 0;
+  min-height: 200vh;
+  color: whitesmoke;
+  font-family: "Tektur", sans-serif;
+  font-size: larger;
+  text-align: left;
+  transition: background 0.5s ease;
+  position: relative;
+}
+
+.text-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 100px 5% 100px 5%;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.fade-in {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1.5s ease;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.final-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: whitesmoke;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.final-button:hover {
+  color: #ffd966;
+}
+
+.bg-stage1 { background: radial-gradient(circle at center, #003344, #000000); }
+.bg-stage2 { background: radial-gradient(circle at center, #005566, #001122); }
+.bg-stage3 { background: linear-gradient(to bottom, #004466, #000000); }
+.bg-stage4 { background: linear-gradient(to bottom, #002233, #000000); }
+.bg-stage5 { background: linear-gradient(to bottom, #111111, #000000); }

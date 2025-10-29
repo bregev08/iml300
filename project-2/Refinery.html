@@ -6,13 +6,25 @@
   <title>Pressure</title>
   <link rel="stylesheet" href="Refinery.css">
 </head>
-<body class="Pressure">
+<body class="Refinery">
+  <video autoplay muted loop id="Liquid-Background-5">
+    <source src="videos/Liquid-Background-5.mp4" type="video/mp4">
+  </video>
+
   <div class="text-container">
-    <p id="line1" class="clickable">Unearthed by man</p>
-    <p id="line2" class="hidden">Fired again</p>
-    <p id="line3" class="hidden">Distilled to your different forms</p>
-    <a id="line4" href="Fuel.html" class="hidden final-button">Fuel</a>
-    <a id="line5" href="Plastic.html" class="hidden final-button">Plastic</a>
+    <p id="line1" class="clickable">With pumps and wells Man draws blood from the Earth</p>
+    <p id="line2" class="hidden">Heated in an artifical furnace and distilled into your different forms</p>
+    <p id="line3" class="hidden">Gasoline, diesel, jet fuel, heating oil, kerosene, propane, butane, plastic bottles, 
+      plastic bags, food containers, styrofoam, cling wrap, tupperware, polyester, nylon, acrylic fabrics, fleece, 
+      synthetic rubber, syringes, IV bags, surgical gloves, bandages, prosthetics, heart valves, pill casings, shampoo, 
+      deodorant, lipstick, perfume, lotion, toothpaste, makeup, detergents, cleaning products, candles, crayons, ink, paint, 
+      furniture foam, phone cases, computer housing, CDs, DVDs, cables, wiring insulation, tires, asphalt, motor oil, antifreeze, 
+      car interiors, footballs, surfboards, fishing line, bicycle helmets, running shoes, PVC pipes, insulation, roofing materials, 
+      adhesives, sealants </p>
+    <div class="button-container hidden" id="button-group">
+      <a id="line4" href="Fuel.html" class="final-button">Fuel</a>
+      <a id="line5" href="Plastic.html" class="final-button">Plastic</a>
+    </div>
   </div> 
 
   <script>
@@ -33,14 +45,13 @@
     });
 
     document.querySelector("#line3").addEventListener("click", function() {
-  document.querySelector("#line4").classList.remove("hidden");
-  document.querySelector("#line4").classList.add("fade-in");
-  document.querySelector("#line5").classList.remove("hidden");
-  document.querySelector("#line5").classList.add("fade-in");
-  body.classList.remove("bg-stage1","bg-stage2","bg-stage4","bg-stage5");
-  body.classList.add("bg-stage3");
-});
+      document.querySelector("#button-group").classList.remove("hidden");
+      document.querySelector("#button-group").classList.add("fade-in");
+      body.classList.remove("bg-stage1","bg-stage2","bg-stage4","bg-stage5");
+      body.classList.add("bg-stage3");
+    });
 
   </script>
+
 </body>
 </html>

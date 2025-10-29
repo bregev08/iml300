@@ -7,14 +7,17 @@
   <link rel="stylesheet" href="ReturnOcean.css">
 </head>
 <body class="Ocean">
+  <video autoplay muted loop id="Liquid-Background-4">
+    <source src="videos/Liquid-Background-4.mp4" type="video/mp4">
+  </video>
   <div class="text-container">
     <p id="line1" class="clickable">Returned to the ocean</p>
-    <p id="line2" class="hidden">You break down</p>
-    <p id="line3" class="hidden">Smaller</p>
-    <p id="line4" class="hidden">And smaller</p>
-    <p id="line5" class="hidden">You are consumed by zooplankton and seabirds</p>
-    <p id="line6" class="hidden">And return to living systems</p>
-    <a id="line7" href="AncientOrganism.html" class="hidden final-button">Start over as carbon</a>
+    <p id="line2" class="hidden">You feed life</p>
+    <p id="line3" class="hidden">Sustaining plankton and algae</p>
+    <p id="line4" class="hidden">You become flesh</p>
+    <p id="line5" class="hidden">And life's remains</p>
+    <p id="line6" class="hidden">That sink to the sea floor</p>
+    <a id="line7" href="Oil.html" class="hidden final-button">Buried by the tide</a>
   </div> 
 
   <script>
@@ -50,7 +53,6 @@
           nextElement.classList.remove("hidden");
           nextElement.classList.add("fade-in");
 
-          // update body background
           body.classList.remove(...bgStages);
           body.classList.add(bgStages[nextIndex]);
         });
