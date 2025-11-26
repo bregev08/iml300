@@ -1,33 +1,55 @@
-/* Basic reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Page styles */
+/* default styles for everything */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f7f7f7;
-    color: #222;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-header {
-    margin-bottom: 30px;
+
+body.home {
+    background: radial-gradient(circle, #fbc2eb, #a6c1ee);
+    color: #333;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+body.page2 {
+  background-color: #D6EFFF;
+  color: #002244;
 }
 
-a {
-    text-decoration: none;
-    color: blue;
+body.page3 {
+  background-color: #FFE6F2;
+  color: #440022;
 }
 
-a:hover {
-    text-decoration: underline;
+.center {
+  text-align: center;
 }
+
+/* Container that holds the boxes */
+.box-row {
+  display: flex;              /* turns on flexbox */
+  justify-content: space-around; /* spreads boxes evenly */
+  margin-top: 20px;
+  padding: 20px;
+}
+
+/* Individual boxes */
+.box {
+  width: 175px;
+  height: 600px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+    
+  Background-image: url('images/my-image.jpg'); /* path to your image */
+  background-size: cover;      /* makes the image cover the whole box */
+  background-position: center; /* centers the image */
+  background-repeat: no-repeat;/* prevents tiling */
+
+  text-decoration: none;     /* removes underline */
+  color: inherit;            /* keeps text color normal */
+}
+
+
