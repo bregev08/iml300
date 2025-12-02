@@ -1,55 +1,144 @@
-/* default styles for everything */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #000000;
+  color: white;
 }
 
-
-body.home {
-    background: radial-gradient(circle, #fbc2eb, #a6c1ee);
-    color: #333;
+.spacer {
+  height: 1500px; /* space before first image */
 }
 
-body.page2 {
-  background-color: #D6EFFF;
-  color: #002244;
-}
-
-body.page3 {
-  background-color: #FFE6F2;
-  color: #440022;
-}
-
-.center {
+#banner {
+  position: fixed;
+  top: 0;
+  width: 100%;
   text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  background: #000000;
+  padding: 10px 0;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
 }
 
-/* Container that holds the boxes */
-.box-row {
-  display: flex;              /* turns on flexbox */
-  justify-content: space-around; /* spreads boxes evenly */
-  margin-top: 20px;
+#main-title {
+  font-size: 5rem;
+  text-align: center;
+  margin: 0;
+  padding: 200px 20px 100px 20px;
+  transition: all 0.1s linear;
+  transform-origin: top center;
+}
+
+.content {
   padding: 20px;
+  background: #000000;
+  min-height: 2000px;
 }
 
-/* Individual boxes */
-.box {
-  width: 175px;
-  height: 600px;
-  border: 2px solid black;
+.image-container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  border-radius: 8px;
-    
-  Background-image: url('images/my-image.jpg'); /* path to your image */
-  background-size: cover;      /* makes the image cover the whole box */
-  background-position: center; /* centers the image */
-  background-repeat: no-repeat;/* prevents tiling */
+  margin-bottom: 50px;
+  position: relative; /* ADD THIS */
+}
 
-  text-decoration: none;     /* removes underline */
-  color: inherit;            /* keeps text color normal */
+.image-container.right {
+  flex-direction: row-reverse; /* image right, text left */
+  justify-content: flex-end;   /* push items toward right side */
+  padding-right: 100px;        /* space from window edge */
+}
+
+.image-container.left {
+  flex-direction: row;         /* image left, text right */
+  justify-content: flex-start; /* push items toward left side */
+  padding-left: 250px;         /* space from window edge */
+}
+
+.image-container img {
+  width: 1250px;
+  max-width: 100%;
+  margin: 0 20px;
+  border: 10px solid white;       /* <— added */
+}
+
+.info-tab {
+  position: absolute;
+  right: -800px; /* hidden offscreen */
+  top: 50%;            /* align vertically with image center */
+  transform: translateY(-50%);
+  width: 800px;  /* larger tab */
+  max-width: 100%; /* responsive limit */
+  background: rgba(0, 0, 0, 0.9); /* semi-transparent black */
+  padding: 20px;  /* more padding */
+  transition: right 0.5s ease;
+  color: white;
+  border-left: 7px solid red; /* thicker border */
+  font-size: 5rem;
+  box-shadow: 0 0 20px rgba(255,0,0,0.5); /* optional glow effect */
+  border-radius: 10px; /* rounded corners */
+}
+
+.info-tab.show {
+  right: 300px;   /* <-- closer to the image */
 }
 
 
+.header-link {
+    color: white;            /* default text color */
+    text-decoration: none;   /* remove underline */
+    transition: color 0.3s;  /* smooth color transition */
+}
+
+.header-link:hover {
+    color: red;              /* color on hover */
+}
+
+.map-header {
+  display: flex;              /* use flexbox */
+  justify-content: space-between; /* left text on left, right text on right */
+  align-items: center;        /* vertically center text */
+  padding: 20px 40px;         /* adjust spacing */
+  font-size: 10rem;            /* header size */
+  color: white;
+  font-weight: bolder;
+}
+
+.map-container {
+  width: 90%;               /* map takes 90% of page width */
+  max-width: 1200px;        /* optional max width */
+  margin: 0 auto;           /* center container */
+}
+
+.map-container svg {
+  width: 100%;              /* fills container width */
+  height: auto;             /* maintains aspect ratio */
+  display: block;           /* removes extra whitespace */
+}
+
+.map-container svg path {
+  fill: #000000;               /* default region color */
+  stroke: white;
+  stroke-width: 5;
+  transition: fill 0.3s;
+}
+
+/* Hover highlight per region */
+#sfv:hover,
+#central-la:hover,
+#westside:hover,
+#sgv:hover,
+#south-bay-gateway:hover,
+#north-badlands:hover {
+  fill: rgb(152, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .map-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}

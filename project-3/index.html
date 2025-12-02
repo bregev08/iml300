@@ -1,28 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 3</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Los Angeles County Heat Equity Map</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="home">
-    <header class="center">
-        <h1>Earth, Wind, & Fire Equity Map</h1>
-    </header>
-    <main>
-    <div class="box-row">
-        <a class="box" href="page2.html">1</a>
-        <div class="box">2</div>
-        <div class="box">3</div>
-        <div class="box">4</div>
-        <div class="box">5</div>
-    </div>
-</main>
+    <header class="map-header">
+    <span class="left">
+        <a href="los-angeles-county.html" class="header-link">Los Angeles County</a>
+    </span>
+    <span class="right">
+        <a href="heat-equity-map.html" class="header-link">Heat Equity Map</a>
+    </span>
+</header>
 
+  <div class="map-container">
+  <svg width="978" height="1018" viewBox="0 0 978 1018" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="county-map">
 
-    <!-- Link to your JavaScript file -->
-    <script src="script.js"></script>
+      <!-- San Fernando Valley -->
+      <path id="sfv" d="M529 416.512L583 418.012L565.5 428.512V435.512L580 447.012V468.012L565.5 490.512L555.5 499.012H542L536 542.512L565 578.012L570.5 615.012L583 630.012L574.5 641.012V649.012L568.5 656.512L556 652.512L539 668.512L527 656.512H478V647.512L451.5 649.012L445 630.012L431 623.012L414 630.012L383.5 616.012L356 623.012H310L296.5 624.512L285.5 616.012L273 613.512H260.5L258 627.512H247.5L237 622.512L225.5 634.012V648.512L237 661.512L232 666.012L194.5 674.012L157.5 655.512H126.5L114 649.512H89.5L88 640.512L115 622.012L126.5 610.012V589.512H206.5V526.512H233.5V494.512L224 462.012L105 166.512H126.5L137 170.012L146.5 180.512L155 174.012V162.512L126.5 119.012L128 79.0121H148.5L209 112.012L254 141.512L268 134.512L295.5 132.512L329.5 134.512L375 163.012V175.012H411L430 184.012L387 212.512V224.012H417.5L452 251.512L445 286.512L428.5 321.512L471 319.512L462 368.012L420 378.012V420.012L449.5 428.012L488.5 403.512L523.5 397.512L529 416.512Z"
+        stroke="white" stroke-width="5"
+        style="cursor:pointer;"
+        onclick="window.location.href='sfv.html'" />
+
+      <!-- Westside -->
+      <path id="westside" d="M126.5 611.512V590.512H117L2.5 674.512V701.512L64 712.012L94 741.012L103.5 744.012L123.5 725.012L144.5 718.512L203.5 715.012H304L339.5 744.012L364.5 783.512L411 760.012L423 766.012L428 752.012V731.512L425.5 721.512L436.5 692.012H456.5V668.512L448 667.512L451.5 655.512V649.012L446 630.012L430.5 623.012L414 630.012L383 616.012L355 623.012H310.5L296.5 624.512L285.5 616.012L272 613.512H262L258 627.512H247L236.5 623.012L226 633.512V649.512L236.5 662.012L231 667.012L195 674.012L157.5 656.012H126.5L113.5 649.512L89.5 648.512L88 640.512L113.5 623.512L126.5 611.512Z"
+        stroke="white" stroke-width="5"
+        style="cursor:pointer;"
+        onclick="window.location.href='westside.html'" />
+
+      <!-- Central LA -->
+      <path id="central-la" d="M577 732.012L591.5 651.512H574L569 656.012L556 652.012L539.5 669.012L527.5 657.012H479L477.5 647.512L452.5 649.012L448.5 667.512H456V691.512H437L425.5 721.512L428.5 731.512V750.512L424.5 763.512L431.5 762.512H460L461.5 773.012H472V802.012H535.5L525.5 754.012L526.5 728.012L543.5 739.012H554L570 749.012L577 732.012Z"
+        stroke="white" stroke-width="5"
+        style="cursor:pointer;"
+        onclick="window.location.href='central-la.html'" />
+
+      <!-- San Gabriel Valley -->
+      <path id="sgv" d="M938.5 426.012L973 451.512L975 475.512L959 573.512L912.5 729.512L870 794.012L761.5 793.012L765.5 776.012L740 766.012L697.5 768.012L702.5 745.512L695.5 725.512L710.5 708.012L700.5 699.512L649 722.012L633.5 736.512L618.5 766.012L608.5 762.512L610 738.012L577.5 731.012L591.5 651.512L574.5 650.012V640.012L582.5 630.012L570 614.512L564 576.512L536 542.012L542.5 498.512H557.5L565 491.012L580 469.012V447.012L565 435.512L566 428.512L592.5 412.512L593.5 408.012L648.5 395.012L704.5 425.012L712 443.012H783L813.5 428.012L850 447.512L874.5 420.012L907 416.012L938.5 426.012Z"
+        stroke="white" stroke-width="5"
+        style="cursor:pointer;"
+        onclick="window.location.href='sgv.html'" />
+
+      <!-- South Bay + Gateway Cities -->
+      <path id="south-bay-gateway" d="M610.5 738.012L577.5 731.012L570.5 748.512L555 739.512L543.5 738.512L527 729.012L526 755.012L534.5 801.012L472.5 802.012V772.512H462L459.5 762.512H431.5L425 765.512L411.5 760.012L365 783.012L383.5 813.512L412.5 888.512L412 918.512L383.5 948.512L398.5 982.512L420.5 980.012L491 1015.01L528.5 997.012L566 965.512H592.5L621.5 978.512L643 965.012L638 945.012L664.5 913.512L665 888.512L727.5 835.012V794.512L761.5 793.512L765.5 775.512L741 766.512L697 769.012L702.5 745.012L693.5 726.512L710 708.012L700 699.512L649 721.512L633.5 735.512L618 765.512L608 763.012L610.5 738.012Z"
+        stroke="white" stroke-width="5"
+        style="cursor:pointer;"
+        onclick="window.location.href='south-bay.html'" />
+
+      <!-- North Badlands -->
+      <path id="north-badlands" d="M974.5 454.012L958 5.51213L39 2.51213L105.5 167.012H127.5L137 170.512L146 181.012L154.5 175.012V162.512L126 118.512L127.5 79.5121H149L183.5 97.5121L212 114.012L254.5 141.512L270 134.012L296 132.512L330 135.512L374 163.512L375.5 175.012H410.5L430.5 184.012L387 211.512V224.012H417L452 252.012L445 285.512L428 322.012L471 320.512L461.5 368.012L420 378.012V419.012L449.5 427.512L490 403.012L524 397.012L529.5 416.512L582.5 419.012L592 413.512L594.5 407.512L648.5 395.012L705 425.512L712.5 443.012H783L814.5 428.512L850 447.512L875 420.012L906.5 417.012L938 425.512L974.5 454.012Z"
+        stroke="white" stroke-width="5"
+        style="cursor:pointer;"
+        onclick="window.location.href='north-badlands.html'" />
+
+    </g>
+  </svg>
+</div>
+
+  <script src="script.js"></script>
 </body>
 </html>
+
