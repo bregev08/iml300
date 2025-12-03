@@ -32,7 +32,6 @@ canvas {
   font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 8px;
   z-index: 2000;      
   transition: background 0.3s, color 0.3s;
 }
