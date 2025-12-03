@@ -1,33 +1,40 @@
 $(document).ready(function() {
   const $title = $('#main-title');
   const $banner = $('#banner');
-  const startFontSize = 5; // rem
-  const endFontSize = 2;   // rem
-  const startPadding = 200;
-  const endPadding = 50;
-  const scrollDistance = 300;
 
-  // Scroll event: shrink title and show banner
-  $(window).on('scroll', function() {
-    const scrollY = $(window).scrollTop();
+  const startFont = 15;
+  const endFont = 4;
 
-    if (scrollY > 50) {
+  const startOffset = 0;
+  const endOffset = -120;
+
+  const scrollRange = 250;
+
+  $(window).on('scroll', function () {
+    const y = $(window).scrollTop();
+
+    const t = Math.min(Math.max(y / scrollRange, 0), 1);
+
+    const fontSize = startFont + (endFont - startFont) * t;
+    $title.css('font-size', fontSize + 'rem');
+
+    const offset = startOffset + (endOffset - startOffset) * t;
+    $title.css('transform', `translateY(${offset}px)`);
+
+    if (t === 1) {
       $banner.css('transform', 'translateY(0)');
     } else {
       $banner.css('transform', 'translateY(-100%)');
     }
-
-    const progress = Math.min(scrollY / scrollDistance, 1);
-    const fontSize = startFontSize - (startFontSize - endFontSize) * progress;
-    const padding = startPadding - (startPadding - endPadding) * progress;
-
-    $title.css('font-size', fontSize + 'rem');
-    $title.css('padding-top', padding + 'px');
   });
 
-  // FIXED CLICK EVENT
-  $(".clickable-image").on("click", function() {
-    $(this).siblings(".info-tab").toggleClass("show");
+  $(".clickable-image").click(function () {
+    $(this).siblings(".info-tab-left, .info-tab-right").toggleClass("show");
   });
 
+  $title.on("click", function () {
+    $("html, body").animate({
+      scrollTop: $("#region-start").offset().top
+    }, 800);
+  });
 });

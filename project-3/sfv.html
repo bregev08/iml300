@@ -4,37 +4,192 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>San Fernando Valley</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </head>
 <body>
 
-  <!-- Banner -->
-  <div id="banner">San Fernando Valley</div>
+<a href="index.html" id="home-button">Home</a>
 
-  <!-- Main Title -->
+<div id="title-wrapper">
   <h1 id="main-title">San Fernando Valley</h1>
+</div>
 
-  <!-- Content Section -->
-   <div class="spacer"></div>
+<div id="region-start"></div>
 
-    <div class="image-container left">
-    <img src="images/sfv-overview.avif" alt="Graph 1" class="clickable-image">
-    <div class="info-tab">
-        <p>Overview: Population, Heat Average, Etc</p>
-    </div>
-    </div>
+<div id="banner">San Fernando Valley</div>
 
-    <div class="image-container">
-      <img src="graph2.png" alt="Graph 2" class="clickable-image">
-      <div class="info-tab">
-        <p>Graph 2: More detailed data and description.</p>
-      </div>
-    </div>
+  <div id="p5-sfv"></div>
 
-    <!-- Add more images as needed -->
+  <p class="region-description">
+  The San Fernando Valley is one of the hottest regions in Los Angeles, shaped by its inland geography, 
+  low tree canopy, and expansive paved surfaces. Neighborhoods like Pacoima, North Hollywood, and 
+  Sun Valley experience some of the most extreme heat in the county, with temperatures regularly 
+  7–15°F higher than coastal areas. Decades of uneven infrastructure investment, limited shade, and 
+  high transit dependence make the Valley especially vulnerable to intensifying heat and climate change.
+</p>
+
+
+  <div class="image-container left">
+  <img src="images/sfv-overview.jpg" class="clickable-image">
+  <div class="info-tab-right">
+    <p>
+      <strong>Overview — San Fernando Valley</strong><br><br>
+
+      <strong>Average Annual Temperature:</strong> ~74°F (warmest region in LA County)<br>
+      <strong>Extreme Heat Days (past decade):</strong> 35–45 days/year above 95°F<br>
+      <strong>Heat Island Index:</strong> +7°F warmer than coastal LA on typical summer days<br><br>
+
+      <strong>Population:</strong> ~1.8 million residents<br>
+      <strong>Racial/Ethnic Composition:</strong><br>
+      • ~43% Latinx<br>
+      • ~37% White<br>
+      • ~11% Asian<br>
+      • ~4% Black<br>
+      • ~5% Mixed/Other<br><br>
+
+      <strong>Heat Vulnerability Indicators:</strong><br>
+      • ~18% of adults have heat-sensitive cardiovascular conditions<br>
+      • ~9% of households include older adults living alone<br>
+      • High asthma rates in Pacoima, Sun Valley, North Hollywood
+    </p>
   </div>
+</div>
+
+
+  <div class="image-container right">
+  <img src="images/sfv-greenspace.jpg" class="clickable-image">
+  <div class="info-tab-left">
+    <p>
+      <strong>Heat Inequity Indicators</strong><br><br>
+
+      <strong>Tree Canopy Coverage:</strong> ~13–17% (County avg ~21%)<br>
+      Lowest canopy areas: Sun Valley, Panorama City, North Hollywood<br><br>
+
+      <strong>Median Household Income:</strong> ~$72,000 (Pacoima & Sun Valley ~55k)<br>
+      <strong>Poverty Rate:</strong> ~15% Valley-wide (up to 28% in some tracts)<br><br>
+
+      <strong>Cooling Centers:</strong> ~14 official locations across SFV<br>
+      <strong>Homes Without AC:</strong> ~22% (higher in older multi-family housing)<br>
+      <strong>Utility Cost Burden:</strong> Energy burden ~6–10% of income in low-income tracts<br><br>
+
+      <strong>Transportation Exposure:</strong><br>
+      • Walkability score: 61 (car-dependent in most areas)<br>
+      • ~70% of bus stops lack shade or shelter<br>
+      • Transit riders experience 10–15°F higher wait-time temps
+    </p>
+  </div>
+</div>
+
+
+<div class="image-container left">
+  <img src="images/sfv-historical.jpg" class="clickable-image">
+  <div class="info-tab-right">
+    <p>
+      <strong>Historical Trends — San Fernando Valley</strong><br><br>
+
+      <strong>Temperature Change:</strong><br>
+      • +4°F average rise since 1950<br>
+      • Extreme heat days have doubled since 1980<br>
+      • Strong nighttime warming: +6–8°F due to heat island buildup<br><br>
+
+      <strong>Urban Development:</strong><br>
+      • Rapid post-WWII paving & sprawl replaced farmland & orchards<br>
+      • Freeways (101, 118, 170, 405) increased heat-absorbing surfaces<br>
+      • Industrial corridors in Sun Valley & Van Nuys intensified heat exposure<br><br>
+
+      <strong>Demographic Change:</strong><br>
+      • 1950s–1970s white suburbanization boom<br>
+      • Post-1980: large Latinx & immigrant communities<br>
+      • Current gentrification pressures in NoHo, Van Nuys, Panorama City<br><br>
+
+      <strong>Environmental Justice History:</strong><br>
+      • Sun Valley long identified as “environmental sacrifice zone”<br>
+      • Gravel pits, landfills, auto dismantlers clustered in low-income tracts<br>
+      • Policies historically neglected tree canopy & shade without public pressure
+    </p>
+  </div>
+</div>
+
+
+<div class="image-container right">
+  <img src="images/sfv-solutions.webp" class="clickable-image">
+  <div class="info-tab-left">
+    <p>
+      <strong>Solutions & Interventions</strong><br><br>
+
+      <strong>Green Infrastructure:</strong><br>
+      • TreePeople shade-equity programs in Pacoima & Arleta<br>
+      • LADOT “Cool Pavement” pilots in Canoga Park & North Hollywood<br>
+      • Shade structures added to select Metro stops (pilot phase)<br><br>
+
+      <strong>Community Solutions:</strong><br>
+      • Pacoima Beautiful: local EJ activism & cool streets advocacy<br>
+      • Neighborhood mutual-aid cooling hubs (summer 2022–present)<br>
+      • Youth climate programs planting >2,500 trees since 2021<br><br>
+
+      <strong>Government Policies:</strong><br>
+      • LA’s Heat Action Plan (2023) prioritizes SFV as high-risk zone<br>
+      • Investments targeted to “shade deserts” & underserved corridors<br>
+      • Mandatory cool roofs on major renovations<br><br>
+
+      <strong>Tech & Design Interventions:</strong><br>
+      • Smart heat sensors in Sun Valley schools & rec centers<br>
+      • Reflective roofing and modern insulation incentives<br>
+      • Heat-resistant materials in park redesigns<br><br>
+
+      <strong>Impact Estimates:</strong><br>
+      • Cool pavement: –10°F surface temps<br>
+      • Increased canopy: –5 to –9°F ambient temps over decades<br>
+      • Equity impact: greatest benefit to low-income, transit-dependent neighborhoods
+    </p>
+  </div>
+</div>
+
+  <div class="image-container left">
+  <img src="images/resources.webp" class="clickable-image">
+  <div class="info-tab-right">
+    <p>
+      <strong>Resources & Links — San Fernando Valley</strong><br><br>
+
+      <strong>Emergency & Safety:</strong><br>
+      • Cooling Centers: SFV libraries, rec centers (link: LA County Cooling Centers)<br>
+      • LA County Heat Emergency Page<br>
+      • Heat Illness Prevention Guide (Cal/OSHA)<br><br>
+
+      <strong>Environmental Justice Organizations:</strong><br>
+      • Pacoima Beautiful<br>
+      • East Yard Communities for Environmental Justice<br>
+      • Climate Resolve<br>
+      • TreePeople<br><br>
+
+      <strong>Data Sources:</strong><br>
+      • LA GeoHub temperature & canopy datasets<br>
+      • CalEnviroScreen 4.0 (Sun Valley/Pacoima high-vulnerability tracts)<br>
+      • U.S. Census ACS (demographics & income)<br>
+      • NOAA heat & climate records<br>
+      • UCLA Heat Resilience research (Sun Valley as case study)<br><br>
+
+      <strong>Interactive Tools:</strong><br>
+      • Urban Heat Island Index Viewer<br>
+      • LA Canopy Coverage Tool<br><br>
+
+      <strong>Local Government:</strong><br>
+      • LA City Council Districts 2, 3, 6, 7, & 12<br>
+      • City of Los Angeles Office of Resilience & Climate
+    </p>
+  </div>
+</div>
+
+
 
   <script src="script.js"></script>
+
+  <script src="backgrounds/p5-sfv.js"></script>
+
 </body>
 </html>

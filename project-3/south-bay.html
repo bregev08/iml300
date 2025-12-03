@@ -1,31 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 3 Page 2</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>South Bay / Gateway Cities</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
 </head>
+<body>
 
-<body class="page2">
-    <header>
-        <h1>Welcome to Page 2</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="page2.html">Page 2</a></li>
-            </ul>
-        </nav>
-    </header>
+<a href="index.html" id="home-button">Home</a>
 
-    <main>
-        <section>
-            <h2>Page 2</h2>
-            <p>Yo!</p>
-        </section>
-    </main>
+  <div id="title-wrapper">
+    <h1 id="main-title">South Bay / Gateway Cities</h1>
+  </div>
 
-    <!-- Link to your JavaScript file -->
-    <script src="script.js"></script>
+  <div id="region-start"></div>
+
+  <div id="banner">South Bay / Gateway Cities</div>
+
+  <div id="p5-sfv"></div>
+
+  <p class="region-description">
+    The South Bay and Gateway Cities region stretches from Long Beach to Torrance and inland areas like Compton and Downey. It encompasses a mix of industrial zones, suburban neighborhoods, and coastal communities. This region faces pronounced urban heat challenges due to dense development, industrial corridors, limited green space, and transportation infrastructure.
+  </p>
+
+
+  <div class="image-container left">
+    <img src="images/southbay-overview.jpg" class="clickable-image">
+    <div class="info-tab-right">
+      <p>
+        <strong>Overview — South Bay / Gateway Cities</strong><br><br>
+
+        <strong>Average Annual Temperature:</strong> ~73°F<br>
+        <strong>Extreme Heat Days:</strong> 35–45 days/year above 95°F<br>
+        <strong>Heat Island Index:</strong> +6–9°F warmer than coastal LA<br><br>
+
+        <strong>Population:</strong> ~2 million residents<br>
+        <strong>Racial/Ethnic Composition:</strong><br>
+        • ~50% Latinx<br>
+        • ~20% Asian<br>
+        • ~20% White<br>
+        • ~5% Black<br>
+        • ~5% Mixed/Other<br><br>
+
+        <strong>Heat Vulnerability Indicators:</strong><br>
+        • High prevalence of cardiovascular and respiratory conditions<br>
+        • Concentrations of older adults living alone<br>
+        • Elevated exposure near industrial corridors and transit hubs
+      </p>
+    </div>
+  </div>
+
+  <div class="image-container right">
+    <img src="images/southbay-greenspace.jpg" class="clickable-image">
+    <div class="info-tab-left">
+      <p>
+        <strong>Heat Inequity Indicators</strong><br><br>
+
+        <strong>Tree Canopy Coverage:</strong> ~10–15% (County avg ~21%)<br>
+        Lowest canopy areas: Compton, Lynwood, Wilmington<br><br>
+
+        <strong>Median Household Income:</strong> ~$65,000 (lower-income pockets ~40k)<br>
+        <strong>Poverty Rate:</strong> 15–25% depending on neighborhood<br><br>
+
+        <strong>Cooling Centers:</strong> ~15 locations across the region<br>
+        <strong>Homes Without AC:</strong> ~20–30%<br>
+        <strong>Utility Cost Burden:</strong> 6–10% in lower-income areas<br><br>
+
+        <strong>Transportation Exposure:</strong><br>
+        • Walkability scores 50–60<br>
+        • Many bus stops with minimal shade<br>
+        • Transit riders exposed to 12–18°F higher wait-time temps
+      </p>
+    </div>
+  </div>
+
+  <div class="image-container left">
+    <img src="images/southbay-historical.webp" class="clickable-image">
+    <div class="info-tab-right">
+      <p>
+        <strong>Historical Trends — South Bay / Gateway Cities</strong><br><br>
+
+        <strong>Temperature Change:</strong><br>
+        • +3.5–4°F average rise since 1950<br>
+        • Extreme heat days doubled since 1980<br>
+        • Nighttime warming intensified by industrial and urban density<br><br>
+
+        <strong>Urban Development:</strong><br>
+        • Postwar suburban and industrial expansion<br>
+        • Freeway networks increased impervious surfaces<br>
+        • Loss of open land and orchards<br><br>
+
+        <strong>Demographic Change:</strong><br>
+        • Rapid growth of Latinx and Asian communities after 1980<br>
+        • White flight in some neighborhoods<br>
+        • Increasing gentrification pressures near coastal areas<br><br>
+
+        <strong>Environmental Justice History:</strong><br>
+        • Industrial facilities concentrated in lower-income neighborhoods<br>
+        • Limited public investment in cooling and green infrastructure
+      </p>
+    </div>
+  </div>
+
+  <div class="image-container right">
+    <img src="images/southbay-solutions.jpg" class="clickable-image">
+    <div class="info-tab-left">
+      <p>
+        <strong>Solutions & Interventions</strong><br><br>
+
+        <strong>Green Infrastructure:</strong><br>
+        • Tree planting and urban greening initiatives in industrial corridors<br>
+        • Cool pavement and reflective surface pilots<br>
+        • Shade structures along high-exposure transit corridors<br><br>
+
+        <strong>Community Solutions:</strong><br>
+        • Neighborhood cooling hubs and mutual-aid networks<br>
+        • Youth-led climate and tree-planting programs<br>
+        • Local advocacy for equitable shade and heat protection<br><br>
+
+        <strong>Government Policies:</strong><br>
+        • Region included in LA County Heat Action Plan<br>
+        • Targeted investments for “shade deserts”<br>
+        • Incentives for cool roofs and heat-resistant materials<br><br>
+
+        <strong>Tech & Design Interventions:</strong><br>
+        • Smart heat sensors in schools and recreation centers<br>
+        • Reflective roofing and insulation improvements<br>
+        • Heat-resistant materials in new developments
+      </p>
+    </div>
+  </div>
+
+  <div class="image-container left">
+    <img src="images/resources.webp" class="clickable-image">
+    <div class="info-tab-right">
+      <p>
+        <strong>Resources & Links — South Bay / Gateway Cities</strong><br><br>
+
+        <strong>Emergency & Safety:</strong><br>
+        • LA County Cooling Centers<br>
+        • Heat Illness Prevention Guide (Cal/OSHA)<br>
+        • City-specific heat emergency pages<br><br>
+
+        <strong>Environmental Justice Organizations:</strong><br>
+        • Climate Resolve<br>
+        • Local tree-planting and heat mitigation advocacy groups<br>
+        • East Yard Communities for Environmental Justice (adjacent projects)<br><br>
+
+        <strong>Data Sources:</strong><br>
+        • LA GeoHub temperature & canopy datasets<br>
+        • CalEnviroScreen 4.0 for heat vulnerability<br>
+        • U.S. Census ACS (demographics & income)<br>
+        • NOAA heat & climate records<br><br>
+
+        <strong>Interactive Tools:</strong><br>
+        • Urban Heat Island Index Viewer<br>
+        • LA Canopy Coverage Tool
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="backgrounds/p5-sfv.js"></script>
 </body>
 </html>
