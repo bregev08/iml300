@@ -17,12 +17,19 @@ body {
 
 h1 { font-size: 120px; color: white; }
 h2 { font-size: 70px; color: white; }
-h3 { font-size: 70px; color: white; }
+h3 { font-size: 70px; background-color: white; color: black; width: fit-content; border-radius: 6px;}
 
 p {
   color: white;
-  font-size: 70px;
+  font-size: 30px;
   line-height: 1.4;
+  font-style: italic;
+}
+
+.section-divider {
+  border: 0;
+  border-top: 4px solid white;
+  width: 100%;          /* adjust length here */
 }
 
 .project-block,
@@ -36,6 +43,7 @@ p {
 .project-block a {
   color: white; /* start white */
   text-decoration: none;
+  font-weight: bold;
 }
 
 .presentation-section a:hover,
@@ -71,7 +79,21 @@ footer {
   color: #ffed29;
 }
 
-/* Vibe Coding thumbnails */
+.grid-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.grid-item a:visited {
+  color: white;
+}
+
+.grid-item a:hover {
+  color: #ffed29; /* same hover yellow as the rest of your site */
+}
+
 .grid-item img {
   width: 100%;
   height: auto;
