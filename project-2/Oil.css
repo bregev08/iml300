@@ -20,8 +20,8 @@ body {
   font-size: larger;
   text-align: center;
   transition: background 0.5s ease;
-  background-color: #001a33; /* start color */
-  min-height: 400vh; /* more scroll space */
+  background-color: #001a33; 
+  min-height: 400vh;
 }
 
 .text-container {

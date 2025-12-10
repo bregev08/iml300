@@ -38,7 +38,7 @@ body {
   color: whitesmoke;
   font-family: "Tektur", sans-serif;
   font-size: larger;
-  text-align: right; /* Changed from center */
+  text-align: right;
   transition: background 0.5s ease;
   background-color: #001a33;
 }

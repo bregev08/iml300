@@ -29,7 +29,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 0; /* lower than nav */
+  z-index: 0;
 }
 
 
@@ -41,7 +41,7 @@ canvas {
 nav {
   margin-top: -150px;
   position: relative;
-  z-index: 10; /* ensures link sits above canvas */
+  z-index: 10; 
 }
 
 

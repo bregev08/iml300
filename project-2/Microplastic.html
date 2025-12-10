@@ -38,7 +38,6 @@
       "bg-stage5"
     ];
 
-    // Track vertical position
     let yOffset = 0;
 
     lines.forEach((line, index) => {
@@ -53,7 +52,7 @@
           const nextElement = document.querySelector(lines[nextIndex]);
 
           
-          yOffset += window.innerHeight * 0.8; // 80% of viewport height
+          yOffset += window.innerHeight * 0.8; 
           nextElement.style.position = "absolute";
           nextElement.style.top = yOffset + "px";
           nextElement.style.left = "5%"; 

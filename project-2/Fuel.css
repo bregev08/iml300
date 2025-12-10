@@ -14,9 +14,9 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-end; /* Changed from center */
+  align-items: flex-end;
   gap: 100vh;
-  padding: 100px 5% 100px 0; /* Added right padding */
+  padding: 100px 5% 100px 0;
 }
 
 body {
